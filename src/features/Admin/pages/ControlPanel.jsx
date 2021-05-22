@@ -1,22 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Route, Switch, useRouteMatch } from 'react-router';
+import ShipperList from '../components/ShipperList';
 import ShopList from '../components/ShopList';
+import TotalPost from '../components/TotalPost';
 
 function ControlPanel(props) {
-    const match = useRouteMatch();
+    const { url } = useRouteMatch();
     return (
         <div>
             Danh sách Quản lý
             <Switch>
-                <Route exact path={match.url}>
+                <Route exact path={url}>
                     <ShopList />
                 </Route>
-                <Route path={`${match.url}/shipper-list`}>
+                <Route path={`${url}/shipper-list`}>
                     <ShipperList />
                 </Route>
-                <Route path={`${match.url}/total-post`}>
-                    <ShipperList />
+                <Route path={`${url}/total-post`}>
+                    <TotalPost />
                 </Route>
             </Switch>
         </div>

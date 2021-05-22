@@ -1,4 +1,4 @@
-import ChangePwForm from 'features/Auth/components/ChangePwForm';
+import ChangePwForm from 'features/Order/components/ChangePwForm';
 import React from 'react';
 
 function ChangePw(props) {
