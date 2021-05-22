@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import AdminFeature from 'features/Admin';
+import AuthFeature from 'features/Auth';
+import { Route, Switch } from 'react-router';
+import NotFound from './components/NotFound';
+import OrderFeature from './features/Order';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Switch>
+                <Route path="/" component={OrderFeature} exact />
+                <Route path="/home" component={OrderFeature} />
+                <Route path="/post-order" component={OrderFeature} />
+                <Route path="/change-pw" component={OrderFeature} />
+
+                <Route path="/admin" component={AdminFeature} />
+
+                <Route path="/login" component={AuthFeature} />
+                <Route path="/register" component={AuthFeature} />
+                <Route path="/forgotpw" component={AuthFeature} />
+
+                <Route component={NotFound} />
+            </Switch>
+        </>
+    );
 }
 
 export default App;
