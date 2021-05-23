@@ -12,15 +12,19 @@ function OrderFeature(props) {
 
     return (
         <>
-            <AsideLeft />
-            <Switch>
-                <Redirect from="/home" to="/" exact />
-                <Route path="/" exact component={OrderList} />
-                <Route path="/home" component={OrderList} />
-                <Route path="/post-order" component={PostOrder} />
-                <Route path="/change-pw" component={ChangePw} />
-            </Switch>
-            <AsideRight />
+            <div className="header-fixed sidebar-enabled bg">
+                <div className="d-flex flex-row flex-column-fluid page">
+                    <AsideLeft />
+                    <Switch>
+                        {/* <Redirect from="/home" to="/" exact /> */}
+                        <Route path="/" exact component={OrderList} />
+                        <Route path="/home" component={OrderList} />
+                        <Route path="/post-order" component={PostOrder} />
+                        <Route path="/change-pw" component={ChangePw} />
+                    </Switch>
+                    <AsideRight />
+                </div>
+            </div>
         </>
     );
 }

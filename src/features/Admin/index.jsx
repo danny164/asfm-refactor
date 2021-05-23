@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ControlPanel from './pages/ControlPanel';
 import { Route, Switch } from 'react-router';
+import ControlPanel from './pages/ControlPanel';
 
 function AdminFeature(props) {
     return (
