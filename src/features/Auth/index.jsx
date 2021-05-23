@@ -13,12 +13,12 @@ function AuthFeature(props) {
         <>
             <div
                 className="bgi-no-repeat"
-                style={{
-                    backgroundColor: 'white',
-                    backgroundPosition: 'center center',
-                    backgroundSize: 'cover',
-                    backgroundImage: `url(${bubbles})`,
-                }}
+                // style={{
+                //     backgroundColor: 'white',
+                //     backgroundPosition: 'center center',
+                //     backgroundSize: 'cover',
+                //     backgroundImage: `url(${bubbles})`,
+                // }}
             >
                 <main className="d-flex flex-column flex-root min-vh-100">
                     <section className="login d-flex flex-row-fluid" id="login">

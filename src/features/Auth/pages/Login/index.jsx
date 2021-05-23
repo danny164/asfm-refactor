@@ -1,5 +1,5 @@
 import { db } from 'app/firebase';
-import { useAuth } from 'context/authContext';
+import { useAuth } from 'context/AuthContext';
 import LoginForm from 'features/Auth/components/LoginForm';
 import moment from 'moment';
 import { useSnackbar } from 'notistack';
@@ -91,6 +91,7 @@ function Login(props) {
         } catch {
             enqueueSnackbar('Đăng nhập thất bại !', { variant: 'error' });
         }
+        setLoading(false);
     };
 
     return (
@@ -100,7 +101,7 @@ function Login(props) {
                     <h3>Đăng nhập</h3>
                     <div className="text-muted font-weight-bold">Amateur Shipper for Merchants</div>
                 </div>
-                <LoginForm onSubmit={onHandleSubmit} onLoading={loading} />
+                <LoginForm onHandleSubmit={onHandleSubmit} onLoading={loading} />
                 <div className="mt-10">
                     <span className="opacity-70 mr-4">Bạn chưa có tài khoản?</span>
                     <Link to="register" className="text-muted text-hover-primary font-weight-bold">

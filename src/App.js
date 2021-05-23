@@ -1,5 +1,5 @@
 import ScrollTop from 'components/ScrollToTop';
-import AuthProvider from 'context/authContext';
+import AuthProvider from 'context/AuthContext';
 import AdminFeature from 'features/Admin';
 import AuthFeature from 'features/Auth';
 import { Route, Switch } from 'react-router';

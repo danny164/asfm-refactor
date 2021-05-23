@@ -9,7 +9,6 @@ function ForgotPw(props) {
                     <h3>Quên mật khẩu?</h3>
                     <div className="text-muted font-weight-bold">Nhập email để lấy lại mật khẩu</div>
                 </div>
-                Xử lý Submit Form Quên Mật khẩu
                 <ForgotPwForm />
             </div>
         </>

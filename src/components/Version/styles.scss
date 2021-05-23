@@ -1,0 +1,13 @@
+.sticky-version {
+    width: fit-content;
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    padding: 1rem;
+    z-index: 50;
+    background-color: #181c32;
+    color: #fff;
+    border-top-right-radius: 0.675rem;
+    border-bottom-right-radius: 0.675rem;
+    transition: width 2s;
+}

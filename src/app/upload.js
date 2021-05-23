@@ -1,4 +1,4 @@
-import { storage } from '../firebase';
+import { storage } from './firebase';
 
 export const uploadImage = (userId, file, progress) => {
     return new Promise((resolve, reject) => {
