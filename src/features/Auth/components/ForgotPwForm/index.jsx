@@ -3,27 +3,24 @@ import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 
-ForgotPwForm.propTypes = {};
+ForgotPwForm.propTypes = {
+    onHandleOnSubmit: PropTypes.func,
+    onLoading: PropTypes.bool,
+};
+
+ForgotPwForm.propTypes = {
+    onHandleOnSubmit: null,
+    onLoading: false,
+};
 
 function ForgotPwForm(props) {
     const emailRef = useRef();
 
-    const [loading, setLoading] = useState(false);
-
-    const { enqueueSnackbar } = useSnackbar();
-
-    const { resetPassword } = useAuth();
-
     async function handleSubmit(e) {
         e.preventDefault();
-        setLoading(true);
-        try {
-            await resetPassword(emailRef.current.value);
-            enqueueSnackbar('Yêu cầu lấy tại mật khẩu thành công, vui lòng kiểm tra email !', { variant: 'success' });
-        } catch {
-            enqueueSnackbar('Tài khoản không tồn tại !', { variant: 'error' });
-        }
-        setLoading(false);
+
+        if (!onHandleOnSubmit) return;
+        onHandleOnSubmit(emailRef.current.value);
     }
     return (
         <>
