@@ -33,7 +33,7 @@ function App() {
 
                     <Route path="/login" component={AuthFeature} />
                     <Route path="/register" component={AuthFeature} />
-                    <Route path="/forgotpw" component={AuthFeature} />
+                    <Route path="/forgot-pw" component={AuthFeature} />
 
                     <Route component={NotFound} />
                 </Switch>

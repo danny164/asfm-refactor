@@ -96,7 +96,7 @@ function LoginForm(props) {
                             Ghi nhớ đăng nhập
                         </label>
                     </div>
-                    <Link to="forgotpw" id="login_forgot" className="text-muted text-hover-primary">
+                    <Link to="forgot-pw" id="login_forgot" className="text-muted text-hover-primary">
                         Quên mật khẩu?
                     </Link>
                 </div>

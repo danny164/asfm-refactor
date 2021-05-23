@@ -2,16 +2,16 @@
 
 ### Quick Import
 
-`import moment from 'moment';`
-`import 'moment/locale/vi';`
+import moment from 'moment';
+import 'moment/locale/vi';
 
-`import { useSnackbar } from 'notistack';`
-`const { enqueueSnackbar } = useSnackbar();`
+import { useSnackbar } from 'notistack';
+const { enqueueSnackbar } = useSnackbar();
 
-`import { useDispatch, useSelector } from 'react-redux';`
+import { useDispatch, useSelector } from 'react-redux';
 
-`const dispatch = useDispatch();`  
-`const filter = useSelector((state) => state.filter);`
+const dispatch = useDispatch();
+const filter = useSelector((state) => state.filter);
 
-`const action = changeFilter(xxx);`
-`dispatch(action);`
+const action = changeFilter(xxx);
+dispatch(action);
