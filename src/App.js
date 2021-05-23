@@ -1,4 +1,5 @@
 import ScrollTop from 'components/ScrollToTop';
+import AuthProvider from 'context/authContext';
 import AdminFeature from 'features/Admin';
 import AuthFeature from 'features/Auth';
 import { Route, Switch } from 'react-router';
@@ -21,20 +22,22 @@ function App() {
     return (
         <>
             <ScrollToTop smooth component={<ScrollTop />} color="#fff" style={style} />
-            <Switch>
-                <Route path="/" component={OrderFeature} exact />
-                <Route path="/home" component={OrderFeature} />
-                <Route path="/post-order" component={OrderFeature} />
-                <Route path="/change-pw" component={OrderFeature} />
+            <AuthProvider>
+                <Switch>
+                    <Route path="/" component={OrderFeature} exact />
+                    <Route path="/home" component={OrderFeature} />
+                    <Route path="/post-order" component={OrderFeature} />
+                    <Route path="/change-pw" component={OrderFeature} />
 
-                <Route path="/admin" component={AdminFeature} />
+                    <Route path="/admin" component={AdminFeature} />
 
-                <Route path="/login" component={AuthFeature} />
-                <Route path="/register" component={AuthFeature} />
-                <Route path="/forgotpw" component={AuthFeature} />
+                    <Route path="/login" component={AuthFeature} />
+                    <Route path="/register" component={AuthFeature} />
+                    <Route path="/forgotpw" component={AuthFeature} />
 
-                <Route component={NotFound} />
-            </Switch>
+                    <Route component={NotFound} />
+                </Switch>
+            </AuthProvider>
         </>
     );
 }

@@ -1,77 +1,7 @@
 import React from 'react';
 
 function OrderList(props) {
-    return (
-        <div>
-            Xử lý Order List
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-            <div>Xử lý Order List</div>
-        </div>
-    );
+    return <div>Xử lý Order List</div>;
 }
 
 OrderList.propTypes = {};
