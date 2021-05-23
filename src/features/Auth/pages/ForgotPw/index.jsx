@@ -10,7 +10,7 @@ function ForgotPw(props) {
 
     const { resetPassword } = useAuth();
 
-    const onHandleSubmit = (email) => {
+    const onHandleSubmit = async (email) => {
         setLoading(true);
         try {
             await resetPassword(email);

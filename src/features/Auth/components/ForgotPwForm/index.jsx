@@ -1,26 +1,26 @@
-import { useAuth } from 'context/AuthContext';
-import React, { useRef, useState } from 'react';
+import PropTypes from 'prop-types';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { useSnackbar } from 'notistack';
 
 ForgotPwForm.propTypes = {
-    onHandleOnSubmit: PropTypes.func,
+    onHandleSubmit: PropTypes.func,
     onLoading: PropTypes.bool,
 };
 
-ForgotPwForm.propTypes = {
-    onHandleOnSubmit: null,
+ForgotPwForm.defaultProps = {
+    onHandleSubmit: null,
     onLoading: false,
 };
 
 function ForgotPwForm(props) {
+    const { onHandleSubmit, onLoading } = props;
     const emailRef = useRef();
 
     async function handleSubmit(e) {
         e.preventDefault();
 
-        if (!onHandleOnSubmit) return;
-        onHandleOnSubmit(emailRef.current.value);
+        if (!onHandleSubmit) return;
+        onHandleSubmit(emailRef.current.value);
     }
     return (
         <>
@@ -42,7 +42,7 @@ function ForgotPwForm(props) {
                         </span>
                     </Link>
                     <button
-                        disabled={loading}
+                        disabled={onLoading}
                         type="submit"
                         id="login_forgot_submit"
                         className="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-2"
